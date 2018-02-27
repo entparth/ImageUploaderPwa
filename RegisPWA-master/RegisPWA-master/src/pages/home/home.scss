@@ -1,0 +1,19 @@
+page-home {
+	ion-content{
+		background: linear-gradient(to bottom right, #3023AE, #C86DD7 170%) !important;
+	}
+
+	h1{
+		font-family: titillium;
+		color:#fff;
+	}
+	p{
+		font-family: titillium;
+		color:#fff;
+	}
+	ion-icon {
+        font-size: 40px; //Preferred size here
+        color: #fff;
+    }
+
+}

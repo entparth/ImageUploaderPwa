@@ -1,0 +1,24 @@
+page-job-details {
+    .scroll-content {
+        background-color: #f8f8f8
+    }
+    .noapplicantdiv{
+       display:block;
+       margin:0 auto;
+    }
+    img{
+        max-width: 128px;
+    }
+    ion-card img{
+        display:inline;
+    }
+    .item-input ion-input,{
+        position: static;
+        border-bottom: solid 1px #f2f2f2;
+    }
+    .item-input ion-textarea {
+        // position: static;
+        border-bottom: solid 1px #f2f2f2;
+    
+    }
+}

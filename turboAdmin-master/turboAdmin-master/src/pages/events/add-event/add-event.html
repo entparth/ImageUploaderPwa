@@ -1,0 +1,56 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>Add New Event</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+	<!-- Add new Event Form -->
+	<form [formGroup]="addEventForm" (submit)="submitAddEventForm()">
+		<ion-item>
+			<ion-label floating>Title</ion-label>
+			<ion-input type="text" [(ngModel)]="title" formControlName="title"></ion-input>
+		</ion-item>
+		<div class="error-msg"></div>
+	
+		<ion-item>
+			<ion-label fixed>Date</ion-label>
+			<ion-input type="date" [(ngModel)]="date" formControlName="date"></ion-input>
+		</ion-item>
+		<div class="error-msg"></div>
+	
+		<ion-item>
+			<ion-label floating>Time</ion-label>
+			<ion-input type="text" [(ngModel)]="time" formControlName="time"></ion-input>
+		</ion-item>
+		<div class="error-msg"></div>
+	
+		<ion-item>
+			<ion-label floating>Location</ion-label>
+			<ion-textarea type="text" [(ngModel)]="location" formControlName="location"></ion-textarea>
+		</ion-item>
+		<div class="error-msg"></div>
+
+		<ion-item>
+			<ion-label floating>Description</ion-label>
+			<ion-textarea type="text" [(ngModel)]="description" formControlName="description"></ion-textarea>
+		</ion-item>
+		<div class="error-msg"></div>
+		
+		<ion-item>
+			<ion-label floating>Instructions</ion-label>
+			<ion-textarea type="text" [(ngModel)]="instructions" formControlName="instructions"></ion-textarea>
+		</ion-item>
+		<div class="error-msg"></div>
+
+		<ion-item>
+			<ion-label floating>Schools to be sent</ion-label>
+			<ion-input type="text" [(ngModel)]="selectedSchools" formControlName="selectedSchools"></ion-input>
+		</ion-item>
+		<div class="error-msg"></div>
+	
+		<button ion-button block type="submit" [disabled]="!addEventForm.valid">Add</button>
+	</form>
+</ion-content>

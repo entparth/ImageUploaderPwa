@@ -1,0 +1,53 @@
+
+
+page-signup {
+	.user-avatar{
+		height: 100px;
+		width: 100px;
+		background: #979797;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 75px;
+		color: white;
+		margin-left: 33%;
+		font-size: 21px;
+		margin-top: 13.5px;
+		margin-bottom: 13.5px;
+	}
+	.user-type {
+		float: right;
+	}
+	.signupbutton{
+		// background-color: #EE0979;
+		background: linear-gradient(to bottom right, #EE0979, #FF6A00 150%) !important;
+		width: 70%;
+		margin-top:30px;
+		font-family: titillium;
+		margin-top: 60px;
+	}
+	.item{
+			font-family: titillium !important;
+			width:95%;
+	}
+	ion-icon {
+        font-size: 40px; //Preferred size here
+        color: #1D1D26;
+    }
+    p{
+		font-family: titillium;
+	}
+	.toolbar-background{
+		background: #fff !important;
+		border:none !important;
+	}
+	.error-message{
+		text-align: left;
+		padding-left: 16px;
+		color:red;
+		margin-top: -10px;
+		margin-bottom: -15px;
+	}
+	
+
+}
+

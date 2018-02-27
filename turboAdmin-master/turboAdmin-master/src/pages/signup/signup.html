@@ -1,0 +1,75 @@
+<!-- <ion-header>
+        <ion-navbar hideBackButton="true">
+          <ion-buttons start align-item-left>
+            <button ion-button right icon-only (click)="back()">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+            
+          </ion-buttons>
+        
+        <ion-title>Sign Up</ion-title>
+        </ion-navbar>
+</ion-header> -->
+<ion-content id="login" text-center padding>
+
+<ion-toolbar>
+      <ion-buttons start align-item-left>
+        <button ion-button right icon-only (click)="back()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      
+      </ion-buttons>
+      
+      <ion-title>Sign Up</ion-title>
+      </ion-toolbar>
+  
+   
+  <div class="login" padding>
+    <img src="assets/imgs/turbologin.png" />
+      <form [formGroup]="signupForm" novalidate>
+
+         
+                <ion-item>
+                  <ion-label floating>First Name</ion-label>
+                  <ion-input #firstName type="text" value="" formControlName="firstName"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floating>Last Name</ion-label>
+                  <ion-input #lastName type="text" value="" formControlName="lastName"></ion-input>
+                </ion-item>
+        
+     
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input #password formControlName="password" [(ngModel)]="user.pass" type="password" [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty && returnInvalid">
+              </ion-input>
+            </ion-item>
+            <div class="error-message" *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty && returnInvalid">
+              <p>Your password needs more than 6 characters.</p>
+            </div>
+            <ion-item>
+              <ion-label floating>Email</ion-label>
+              <ion-input #email formControlName="email" [(ngModel)]="user.email" type="email" [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty && returnInvalid">
+              </ion-input>
+            </ion-item>
+            <div class="error-message" *ngIf="returnInvalid">
+              <p>{{errormessage}}</p>
+            </div>
+
+        
+          
+        <button ion-button block round type="submit" (click)="signupUser()" style="margin-top: 2em">Sign up</button>
+        </form>
+
+  
+
+  <!-- <div class="buttonspadding"> -->
+  
+  <!-- </div> -->
+
+    </div>
+
+</ion-content>
+
+
+<!-- (input)="clearErrors()" -->
