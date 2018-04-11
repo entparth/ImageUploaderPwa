@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+
+    <ion-col tappable>
+      <ion-card (click)="goToJobs()">
+        <ion-card-header>
+          <!-- <div class="left-num-disp">{{ activeJobsNo }}</div> -->
+        </ion-card-header>
+        <ion-card-content>
+          <div class="right-txt-disp">Active Jobs</div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col tappable>
+      <ion-card (click)="goToSchoolsPage()">
+        <ion-card-header>
+          <!-- <div class="left-num-disp">{{ schoolsNo }}</div> -->
+        </ion-card-header>
+        <ion-card-content>
+          <div class="right-txt-disp">Number of Schools</div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+
+    <ion-col tappable>
+      <ion-card (click)="goToArticlesPage()">
+        <ion-card-header>
+          <!-- <div class="left-num-disp">{{ articlesNo }}</div> -->
+        </ion-card-header>
+        <ion-card-content>
+          <div class="right-txt-disp">Number of Articles</div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col tappable>
+      <ion-card (click)="goToStudentsPage()">
+        <ion-card-header>
+          <!-- <div class="left-num-disp">{{ studentsNo }}</div> -->
+        </ion-card-header>
+        <ion-card-content>
+          <div class="right-txt-disp">Number of Students</div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

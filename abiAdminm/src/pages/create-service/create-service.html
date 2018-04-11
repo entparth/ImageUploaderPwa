@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Category</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <form [formGroup]="ServicesForm" novalidate>
+      <ion-item>
+        <ion-label>Service</ion-label>
+        <ion-select #services formControlName="services" [(ngModel)]="user.services">
+          <ion-option *ngFor="let item of getCategories" [value]="item">{{item.name}}</ion-option>
+
+        </ion-select>
+
+      </ion-item>
+      <!-- 
+      <ion-input #services formControlName="services" type="text" [(ngModel)]="user.services">
+      </ion-input>
+    </ion-item> -->
+      <ion-item>
+        <ion-label floating>Sub Services</ion-label>
+
+        <ion-input #subSevices formControlName="subServices" [(ngModel)]="user.subServices" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Questions</ion-label>
+        <ion-textarea #questions formControlName="questions" type="text"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        Upload Image for the service
+        <image-upload [max]="1" [buttonCaption]="'Select Image'" [dropBoxMessage]="''" [extensions]="['jpg','png']" (uploadFinished)="onImageSelect($event)"></image-upload>
+      </ion-item>
+      <button ion-button block full (click)=" uploadImageUrl()">Upload Image</button>
+      <button ion-button block full (click)="servicesSubmit()"> Add Services</button>
+    </form>
+    <button ion-button block full (click)="gotocatPage()">let add some categories first</button>
+  </div>
+
+
+
+</ion-content>
