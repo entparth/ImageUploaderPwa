@@ -1,4 +1,3 @@
-import { CategoriesPage } from './../categories/categories';
 import { FirebaseProvider } from './../../providers/firebase/firebase';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
@@ -74,7 +73,7 @@ export class ServicesFormPage {
   }
 
   gotocatPage() {
-    this.navCtrl.push(CategoriesPage)
+    // this.navCtrl.push(CategoriesPage)
   }
 
 
